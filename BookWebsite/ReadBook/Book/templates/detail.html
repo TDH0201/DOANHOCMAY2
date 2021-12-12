@@ -1,0 +1,455 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themeicon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" class="color-switcher-link">
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}" class="color-switcher-link">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './fontawesome-free-5.15.4-web/css/all.min.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'stylehai.css' %}">
+
+</head>
+
+<body>
+
+
+    <!-- begin nav -->
+    <div class="container-fluid ">
+        <div class="row navigation">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse navbar-light  " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item nav-home">
+                                <a class="nav-link active  " aria-current="page" href="#"> <img class="logo-1 mb-0"
+                                        src="{% static './img/logo-1.png.webp' %}" alt="logo-1"></a>
+                            </li>
+                            <li class="nav-item dropdown nav-Discover">
+                                <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Discover
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-discover" aria-labelledby="navbarDropdown">
+                                    <li class=" dropdown-item" style="height: 100%;">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <h4>Genres</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="Discover-sub">Action & Adventure</a>
+                                                        <a class="Discover-sub">Bios & History</a>
+                                                        <a class="Discover-sub">Children's</a>
+                                                        <a class="Discover-sub">Fantasy</a>
+                                                        <a class="Discover-sub"> Historical Fiction</a>
+                                                        <a class="Discover-sub"> Horror</a>
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="Discover-sub">Literary Fiction</a>
+                                                        <a class="Discover-sub">Mystery & Thriller</a>
+                                                        <a class="Discover-sub">Non-Fiction</a>
+                                                        <a class="Discover-sub">Romance</a>
+                                                        <a class="Discover-sub"> Science Fiction</a>
+                                                        <a class="Discover-sub">Young Adult</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 Resources ">
+                                                <h4>Resources</h4>
+                                                <div class="col-md-12 ">
+                                                    <a class="Discover-sub">Authors</a>
+                                                    <a class="Discover-sub">Languages</a>
+                                                    <a class="Discover-sub">Genres</a>
+                                                    <a class="Discover-sub">ArticlesAuthor</a>
+                                                    <a class="Discover-sub">Authors</a>
+                                                    <a class="Discover-sub">Discuss</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mt-2">
+                                <form class="d-flex form-search">
+                                    <input class="txt-search form-control me-2 " type="texts"
+                                        placeholder="Search by title, author or keyword" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </li>
+                            <li class="nav-item dropdown My-Profile mt-2">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Profile
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item dropdown-item-MyProfile" href="#">View Profile</a></li>
+                                    <li><a class="dropdown-item dropdown-item-MyProfile" href="#">Edit acount</a></li>
+                                    <li><a class="dropdown-item dropdown-item-MyProfile" href="#">Log out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- end nav -->
+
+
+    <!-- begin body -->
+    <section class="ls s-py-90 s-py-xl-160 c-gutter-60">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-12">
+                    <div class="product">
+
+                        <div class="images" id="figureBook">
+                           
+                        </div>
+
+                        <div class="summary entry-summary">
+
+                            <h1 class="product_title entry-title" style="display: block;" id="bookdetail_title">
+
+                            </h1>
+                            <div class="price-wrap">
+                                <div class="woocommerce-product-rating">
+                                    <div class="star-rating">
+                                        <span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5
+                                            based on <span class="rating">3</span> customer ratings</span>
+                                    </div>
+                                    <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span
+                                            class="count">3</span> customer
+                                        reviews)</a>
+                                </div>
+                                <p class="price">
+                                    <span class="tagged_as" style="font-size: 30px;font-weight: 100;">Author: <span class="sku" id="author_book"></span></span>
+                                    <!-- <span>
+                                        <span>$</span>20.00
+                                    </span> -->
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="text-align: center;">Book sumary</h3>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Vestibulum
+                                    tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+                                    sit amet quam egestas
+                                    semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            </div>
+
+                            <form>
+
+
+
+                                <div class="single_variation_wrap">
+                                    <div>
+                                        <button type="button" class="single_add_to_cart_button button alt" style="float: right;" data-toggle="modal" data-target="#myModal">Read book</button>
+
+                                        
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="product_meta">
+                                <span class="sku_wrapper">Release: <span class="sku" id="year_public"></span>
+                                </span>
+                                <span class="posted_in">Page: <span class="sku">300</span>
+                                </span>
+
+
+                                <span class="tagged_as">Download: <span class="sku">200000</span>
+                            </div>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/" class="fa border-icon rounded-icon fa-facebook"
+                                    title="facebook"></a>
+                                <a href="https://twitter.com/" class="fa border-icon rounded-icon fa-twitter"
+                                    title="twitter"></a>
+                                <a href="https://www.linkedin.com/" class="fa border-icon rounded-icon fa-linkedin"
+                                    title="linkedin"></a>
+                                <a href="https://www.youtube.com/" class="fa border-icon rounded-icon fa-youtube-play"
+                                    title="youtube"></a>
+                                <a href="https://www.instagram.com/" class="fa border-icon rounded-icon fa-instagram"
+                                    title="instagram"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="woocommerce-tabs wc-tabs-wrapper">
+
+                            <ul class="tabs wc-tabs" role="tablist">
+                                <li class="additional_information_tab active" id="tab-title-additional_information"
+                                    role="tab" aria-controls="tab-additional_information">
+                                    <a href="#tab-additional_information">Report Error</a>
+                                </li>
+                                <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+                                    <a href="#tab-reviews">Reviews (3)</a>
+                                </li>
+                            </ul>
+
+                            <div class="panel wc-tab" id="tab-additional_information" role="tabpanel"
+                                aria-labelledby="tab-title-additional_information">
+
+                                <h2>Report Error</h2>
+
+                                <div id="review_form_wrapper">
+                                    <div id="review_form">
+                                        <div id="respond" class="comment-respond">
+                                            
+                                            <form action="" method="post"id="commentform" class="comment-form" novalidate="">
+                                                <p class="comment-form-comment">
+                                                    <label for="report">Report error title <span class="required">*</span>
+                                                    </label>
+                                                    <input id="report" name="report" type="text" value="" size="30"
+                                                        aria-required="true" required="">
+                                                </p>
+                                                <p class="comment-form-comment">
+                                                    <label for="conten">Content <span class="required">*</span></label>
+                                                    <textarea id="conten" name="conten" cols="45" rows="4" aria-required="true" required=""></textarea>
+                                                </p>
+                                                
+                                                <p class="form-submit">
+                                                    <input name="submit" type="submit" id="submit" class="submit"value="Send report">
+                                                </p>
+                                            </form>
+                                        </div>
+                                        <!-- #respond -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel wc-tab" id="tab-reviews" role="tabpanel"
+                                aria-labelledby="tab-title-reviews">
+                                <div id="reviews">
+                                    <div id="comments">
+                                        <h2>3 reviews for <span>Ship Your Idea</span>
+                                        </h2>
+
+
+                                        <ol class="commentlist">
+                                            <li class="comment even thread-even depth-1" id="li-comment-34">
+
+                                                <div id="comment-34" class="comment_container">
+
+                                                    <img alt="img" src="images/team/08.jpg"
+                                                        srcset="./images/team/08.jpg" class="avatar avatar-60 photo"
+                                                        height="60" width="60">
+                                                    <div class="comment-text">
+
+                                                        <div class="star-rating">
+                                                            <span style="width:80%">Rated <strong
+                                                                    class="rating">4</strong> out of 5</span>
+                                                        </div>
+                                                        <p class="meta">
+                                                            <strong>Whoopie R. Hood</strong> <span>–</span>
+                                                            <time datetime="2013-06-07T11:43:13+00:00">April 07, 2020 -
+                                                                11:30 AM
+                                                            </time>
+                                                        </p>
+
+                                                        <div class="description">
+                                                            <p>
+                                                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                                                                aut odit aut fugit, sed quia consequuntur magni dolores
+                                                                eos ratione voluptatem sequi nesciunt. Neque porro
+                                                                quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                                                consectetur, adipisci velit, sed quia non numquam eius
+                                                                modi tempora incidunt dolore magnam aliquam quaerat
+                                                                voluptatem.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+
+
+                                    </div>
+
+
+                                    <div id="review_form_wrapper">
+                                        <div id="review_form">
+                                            <div id="respond" class="comment-respond">
+                                                <span id="reply-title" class="comment-reply-title">Add your review
+                                                    <small>
+                                                        <a rel="nofollow" id="cancel-comment-reply-link" href="#respond"
+                                                            style="display:none;">Cancel reply</a>
+                                                    </small>
+                                                </span>
+                                                <form action="https://html.modernwebtemplates.com/" method="post"
+                                                    id="commentform" class="comment-form" novalidate="">
+                                                    <p class="comment-notes">
+                                                        <span id="email-notes">Your email address will not be
+                                                            published.</span>
+                                                        Required fields are marked <span class="required">*</span>
+                                                    </p>
+                                                    <div class="comment-form-rating">
+                                                        <label>Your rating</label>
+                                                        <p class="stars">
+                                                            <span>
+                                                                <a class="star-1" href="#">1</a>
+                                                                <a class="star-2" href="#">2</a>
+                                                                <a class="star-3" href="#">3</a>
+                                                                <a class="star-4" href="#">4</a>
+                                                                <a class="star-5" href="#">5</a>
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                    <p class="comment-form-comment">
+                                                        <label for="comment">Your review <span
+                                                                class="required">*</span></label>
+                                                        <textarea id="comment" name="comment" cols="45" rows="4"
+                                                            aria-required="true" required=""></textarea>
+                                                    </p>
+                                                    <p class="comment-form-author">
+                                                        <label for="author">Full name <span class="required">*</span>
+                                                        </label>
+                                                        <input id="author" name="author" type="text" value="" size="30"
+                                                            aria-required="true" required="">
+                                                    </p>
+                                                    <p class="comment-form-email">
+                                                        <label for="email">Email address<span class="required">*</span>
+                                                        </label> <input id="email" name="email" type="email" value=""
+                                                            size="30" aria-required="true" required="">
+                                                    </p>
+                                                    <p class="form-submit">
+                                                        <input name="submit" type="submit" id="submit" class="submit"
+                                                            value="Add review">
+                                                    </p>
+                                                </form>
+                                            </div>
+                                            <!-- #respond -->
+                                        </div>
+                                    </div>
+
+
+                                    <div class="clear">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- #product-22 -->
+
+
+                </main>
+            </div>
+
+        </div>
+    </section>
+    <!-- end body -->
+
+
+
+    <!-- begin footer -->
+    <div class="footer container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="logo-1" src="{% static './img/logo-1.png.webp' %}" alt="logo-1">
+                <div class="mb-2">
+                    <p class="tilte-addres"><i class=" location fas fa-map-marker-alt"></i>Office:</p>
+                    <span class="des-address">Thôn Nghĩa Tây, Đại Nghĩa, Quảng Nam</span>
+                </div>
+                <div class="mb-2">
+                    <p class="tilte-addres"><i class=" location fas fa-phone-alt"></i>Tell:</p>
+                    <span class="des-address">09059351234</span>
+                </div>
+                <div class="mb-2">
+                    <p class="tilte-addres"><i class=" location far fa-envelope"></i>email:</p>
+                    <span class="des-address">Bookio@gmail.com</span>
+                </div>
+                <div class="share mt-2">
+                    <a href="#"> <i class="icon-tiwitter fab fa-twitter"></i></a>
+                    <a href="#"> <i class="icon-tiwitter fab  fa-facebook"></i></a>
+                    <a href="#"> <i class="icon-tiwitter fab fa-instagram-square"></i></a>
+                    <a href="#"> <i class="icon-tiwitter fab fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="about col-md-4">
+                        <h4 class="about_tilte">ABOUT US</h4>
+                        <p class="about_des">Contact Us</p>
+                        <p class="about_des">Track Your Order</p>
+                        <p class="about_des">Returns Policy</p>
+                        <p class="about_des">Delivery Information</p>
+                        <p class="about_des">Loyalty Program</p>
+                    </div>
+                    <div class="about col-md-4">
+                        <h4 class="about_tilte">CATEGORIES</h4>
+                        <p class="about_des">Coupons</p>
+                        <p class="about_des">RX Prescription</p>
+                        <p class="about_des">Scholarship Program</p>
+                        <p class="about_des">Brand Directory</p>
+                        <p class="about_des">E-Catalogs/Requests</p>
+                    </div>
+                    <div class="about col-md-4">
+                        <h4 class="about_tilte">OUR NEWSLETTER</h4>
+                        <p class="about_des">Monthly digest of whats new and exciting from us.</p>
+                        <div>
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="mail" class="mt-4 form-control" placeholder="Email address">
+                            <button class="btn btn-primary mt-2" type=" button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Book content</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                This book sent a few initial shockwaves out when it was released, but it is a great resource for both marketers in general as well as veteran content marketers. Randy isn’t saying content marketing is dead (another past shocker of a title). He emphasizes you can’t focus just on the content but rather how the content will be experienced.
+
+                Randy also points out that many journalists and writers have been trained to focus on quality content but not on how and/or when it will be distributed in the digital age. I thought it was a good book that offered a fresh and very applicable perspective on creating content that works and converts. – Holly Rollins, president, 10x digital
+                
+                It’s great (despite the title) – Nat Libby, content marketing executive, Linnworks
+                
+                From the first page to the last one, Randy has packed this book with all the information that a marketing person or even other organization members need to know about content marketing. What is the purpose of generating content if no one is reading it? No writing material could fit for all users. Organizing, personalizing, and hitting the right customer with the right content at the right time is a must thing that every marketer should know. – Jessica Chase, sales and marketing manager, Premier Title Loans
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    <!-- end footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static './script/bookdetail.js' %}"></script>
+    <script src="{% static 'js/compressed.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/switcher.js' %}"></script>
+</body>
+
+</html>

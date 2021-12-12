@@ -1,0 +1,269 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './fontawesome-free-5.15.4-web/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+  
+
+    <!-- begin nav -->
+    <div class="container-fluid ">
+        <div class="row navigation">
+          <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse navbar-light  " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <li class="nav-item nav-home">
+                    <a class="nav-link active  " aria-current="page" href="#"> <img  class="logo-1 mb-0" src="{% static './img/logo-1.png.webp' %}" alt="logo-1"></a>
+                  </li>
+                  <li class="nav-item dropdown nav-Discover">
+                    <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Discover
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-discover" aria-labelledby="navbarDropdown">
+                        <li class=" dropdown-item" style="height: 100%;">
+                          <div class="row">
+                            <div class="col-md-9">
+                                <h4>Genres</h4>
+                                 <div class="row">
+                                   <div class="col-md-6">
+                                    <a class="Discover-sub">Action & Adventure</a>
+                                    <a class="Discover-sub">Bios & History</a>
+                                    <a class="Discover-sub">Children's</a>
+                                    <a class="Discover-sub">Fantasy</a>
+                                    <a class="Discover-sub"> Historical Fiction</a>
+                                    <a class="Discover-sub"> Horror</a>
+                                    
+                                   </div>
+                                   <div class="col-md-6">
+                                    <a class="Discover-sub">Literary Fiction</a>
+                                    <a class="Discover-sub">Mystery & Thriller</a>
+                                    <a class="Discover-sub">Non-Fiction</a>
+                                    <a class="Discover-sub">Romance</a>
+                                    <a class="Discover-sub"> Science Fiction</a>
+                                    <a class="Discover-sub">Young Adult</a>
+                                    
+                                   </div>
+                                 </div> 
+                            </div>
+                            <div class="col-md-3 Resources ">
+                                <h4>Resources</h4>
+                                <div class="col-md-12 ">
+                                  <a class="Discover-sub">Authors</a>   
+                                  <a class="Discover-sub">Languages</a>
+                                  <a class="Discover-sub">Genres</a>
+                                  <a class="Discover-sub">ArticlesAuthor</a>
+                                  <a class="Discover-sub">Authors</a>
+                                  <a class="Discover-sub">Discuss</a>
+                                </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <form class="d-flex form-search">
+                      <input class="txt-search form-control me-2 " type="text" placeholder="Search by title, author or keyword" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </li>
+                  <li class="nav-item dropdown My-Profile mt-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      My Profile
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item dropdown-item-MyProfile" href="#">View Profile</a></li>
+                      <li><a class="dropdown-item dropdown-item-MyProfile" href="#">Edit acount</a></li>
+                      <li><a class="dropdown-item dropdown-item-MyProfile" href="#">Log out</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+        </div>
+    </div>
+    <!-- end nav -->
+      <!-- begin slider -->
+      <div class="container-fluid" style="padding: 0 0px;margin-bottom: 180px;">
+      <div class=" slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 slide-img" src="{% static './img/bookstackssmallslider1.jpg' %}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slide-img" src="{% static './img/bookdisplaysmallslider2.jpg' %}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slide-img" src="{% static './img/bookcoverssmall2slider3.jpg' %}" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+      <!-- end slider -->
+
+    <!-- begin body   -->
+
+      <!-- begin editors choice -->
+    <div class="container topic-body">
+      <div class=" edit-choice">
+        <h5>EDITOR'S CHOICE</h5>
+        <a href="">(view all)</a>
+      </div>
+      <div class="row"  id="edit-choice">
+
+        <!-- <div class="col-md-2">
+          <div class="card " style="width: 172px ; height: 294px; border: none;">
+            <a href=""> <img src="{% static './img/pawsOffTheBoss.jpeg' %}" class="card-img-top card-img-book" alt="the boss"></a>
+            <div class="card-body " >
+              <p class="card-text" style="min-height: 80px;"  >Paws off the boss</p>
+            </div>
+          </div>
+        </div> -->
+       
+      </div>
+    </div>
+      <!-- end editors choice -->
+
+      <!-- begin trending book -->
+      <div class="container topic-body">
+        <div class=" edit-choice">
+          <h5>Trending Book</h5>
+          <a href="">(view all)</a>
+        </div>
+        <div class="row" id="trending-book">
+          <!-- <div class="col-md-2">
+            <div class="card " style="width: 172px ; height: 294px; border: none;">
+              <a href=""> <img src="./img/pawsOffTheBoss.jpeg" class="card-img-top card-img-book" alt="the boss"></a>
+              <div class="card-body " >
+                <p class="card-text" style="min-height: 80px;"  >Paws off the boss</p>
+              </div>
+            </div>
+          </div> -->
+         
+        </div>
+      </div>
+      <!-- end trending book-->
+
+      <!-- begin Top Categories-->
+      <div class="container topic-body">
+        <div class=" edit-choice">
+          <h5>Top Categories</h5>
+          <a href="">(view all)</a>
+        </div>
+        <div class="row" id ="top-caetory">
+          <!-- <div class="col-md-2">
+            <div class="card " style="width: 172px ; height: 294px; border: none;">
+              <a href=""> <img src="./img/Top Categories/romance.jpg" class="card-img-top card-img-book" alt="the boss"></a>
+              <div class="card-body " >
+                <p class="card-text" style="min-height: 80px;"  >Romance</p>
+              </div>
+            </div>
+          </div> -->
+         
+        </div>
+      </div>
+      <!-- end Top Categories-->
+
+      <!-- begin book of the month -->
+      <!-- <div class="container BookofMOnth">
+          <div class="titleBookMonth">
+            <h4>Books of the Month</h4>
+            <a href="#">View all</a>
+          </div>
+        <div class="row">
+          <div class="col-md-6">
+
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div> -->
+      <!-- end book of the month -->
+    <!-- end body   -->
+
+    <!-- begin footer -->
+    <div class="footer container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <img  class="logo-1" src="{% static './img/logo-1.png.webp' %}" alt="logo-1">
+          <div class="mb-2">
+            <p class="tilte-addres"><i class=" location fas fa-map-marker-alt"></i>Office:</p>
+            <span class="des-address">Thôn Nghĩa Tây, Đại Nghĩa, Quảng Nam</span>
+          </div>
+          <div class="mb-2">
+            <p class="tilte-addres"><i class=" location fas fa-phone-alt"></i>Tell:</p>
+            <span class="des-address">09059351234</span>
+          </div>
+          <div class="mb-2">
+            <p class="tilte-addres"><i class=" location far fa-envelope"></i>email:</p>
+            <span class="des-address">Bookio@gmail.com</span>
+          </div>
+          <div class="share mt-2">
+           <a href="#"> <i class="icon-tiwitter fab fa-twitter"></i></a>
+           <a href="#"> <i class="icon-tiwitter fab  fa-facebook"></i></a>
+           <a href="#"> <i class="icon-tiwitter fab fa-instagram-square"></i></a>
+           <a href="#"> <i class="icon-tiwitter fab fa-youtube"></i></a>
+          </div>
+         
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+          <div class="about col-md-4">
+            <h4 class="about_tilte">ABOUT US</h4>
+            <p class="about_des">Contact Us</p>
+            <p class="about_des">Track Your Order</p>
+            <p class="about_des">Returns Policy</p>
+            <p class="about_des">Delivery Information</p>
+            <p class="about_des">Loyalty Program</p>
+          </div>
+          <div class="about col-md-4">
+            <h4 class="about_tilte">CATEGORIES</h4>
+            <p class="about_des">Coupons</p>
+            <p class="about_des">RX Prescription</p>
+            <p class="about_des">Scholarship Program</p>
+            <p class="about_des">Brand Directory</p>
+            <p class="about_des">E-Catalogs/Requests</p>
+          </div>
+          <div class="about col-md-4">
+            <h4 class="about_tilte">OUR NEWSLETTER</h4>
+            <p class="about_des">Monthly digest of whats new and exciting from us.</p>
+            <div>
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="mt-4 form-control" placeholder="Email address">
+              <button class="btn btn-primary mt-2" type=" button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <script src="{% static './script/homebook.js' %}"></script>
+   <script src="{% static './js/bootstrap.min.js' %}"></script>
+</body>
+</html>
